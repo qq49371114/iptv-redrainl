@@ -16,7 +16,7 @@ keyword = sys.argv[1]
 payload = {'search': keyword}
 
 # 发送 POST 请求
-response = requests.post(url, data=payload)
+response = requests.post(url, data=payload, timeout=60)
 
 # 打印响应内容
 print(response.text)
